@@ -1,0 +1,103 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Distribution / packaging
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+.DS_env
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+DS_env/
+
+# Data files
+/audio_files/
+/output/
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+*.json
+*.txt
+*.md
+!README.md
+*.csv
+*.xlsx
+
+# Model files - can be very large
+*.pt
+*.pth
+*.bin
+*.h5
+*.model
+*.onnx
+*.ckpt
+*.safetensors
+
+# Image outputs
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.project
+.pydevproject
+.settings/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Hugging Face cache and models
+.cache/
+.huggingface/
+
+# Temporary files
+*.bak
+*.tmp
+*.log
