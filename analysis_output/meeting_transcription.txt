@@ -1,0 +1,1230 @@
+Next Weekly Sync-20250418_120827-Meeting Recording
+April 18, 2025, 4:08PM
+54m 35s
+
+Xinru Liu   0:04
+OK.
+
+Wilson Rivas   0:05
+Oh no. It's still saying Jeff's.
+
+Xinru Liu   0:06
+OK.
+Yeah, that's my understanding is always go to the owner of the meeting.
+
+Wilson Rivas   0:10
+OK.
+No, now it switched.
+Now it's switched.
+
+Xinru Liu   0:13
+Oh, now it switch to me. OK, great.
+
+Jeff Bailey   0:16
+Wait. All right, cool.
+All right. So maybe we can just do a quick pass through last week's.
+Stuff to catch up on on sort of any leftover bits from the week before.
+Kiss. With that out, there we go.
+Show my screen.
+Landscape tool.
+Did that get purchased?
+
+Wilson Rivas   0:56
+That finally came through and it was installed on Xiao.
+So he has it.
+I don't know if he's reached out to Sharan yet to try it out or anything.
+
+Jeff Bailey   1:02
+OK.
+
+Sharan Muthalayil   1:08
+No, I haven't heard back from him.
+I did share some of the educational materials.
+That I had on the tool.
+I was trying to set up a call with consultants I think, but they since I think we just one license, I think they're just giving us all those questions in, in the format of educational material.
+So I'm just gonna go through that and share like, yeah, the relevant stuff with the team.
+To be used.
+
+Jeff Bailey   1:42
+So you'll you'll just find some time to tag up with him next week, OK?
+
+Sharan Muthalayil   1:44
+With.
+Next week.
+
+Jeff Bailey   1:47
+Great, perfect pinnacle rollout.
+So that's live.
+There have been a couple hiccups there with the process. The auto assign function wasn't really working.
+Turns out that auto was an only works when people are added to the directory the Active Directory.
+So I had to go back and manually assign everybody.
+The assignments, which is fine that that happened. But moving forward, when people are added.
+To our Active Directory. They will automatically start to get enrolled in these assessments based on their learning cohort.
+So that's one piece of sort of update around the Pinnacle rollout. Another piece is related to Procore Wilson and I were talking about this this morning and we'll probably touch on it a little later when Sage Realizon the call. But essentially there's a series of questions practical quest.
+
+Wilson Rivas   2:26
+Thanks.
+
+Jeff Bailey   2:44
+Not knowledge. Questions related to procore.
+Which require access to the platform.
+So we have to figure out whether we want to either remove those from the assessment or add, you know, add, you know, remove Pro core entirely from what we're we're assessing people on or.
+Remove those specific questions from the question set and update it and and resend it.
+Or actually purchase a couple instances of procore so that people.
+We can use it as a sandbox and get familiar with it, so we'll talk with sagel about that later and and figure out the direction there.
+Content catalog.
+It's live.
+We have already 3 separate issues logged with Autodesk on this.
+Three separate tickets, all related to the same basic issues.
+Thank you chenzhang for the resolving the issue there we had with the user group's.
+Essentially, we had just not assigned.
+The folders to all of the right user groups.
+We fixed that.
+So that is looking good.
+That said, there is still some work to be done there.
+We have a meeting next week to go over all of the details there and kind of dig into that in more more detail.
+SharePoint so this is related to the.
+Blue.
+Website, Specifically the Hlw University section, and there have been a bunch of changes there.
+Let me just share with you guys.
+It's probably gonna make me do 2 factor.
+Sorry. So if we go to Hlw University now.
+You'll see things have changed a little bit here.
+So we've got some new images, we've got some new setup.
+This takes you to the practice manual.
+This is all of the content related to design and delivery.
+Basically the create series. This is all of our next stuff, anything related to sort of, you know, all of our content and then this is just enrichment hour.
+This is everything else.
+So yeah.
+So now we're gonna start.
+Adding some more content into this location.
+Things like the ISO 19650 training and things like that.
+So I think there's still a little bit of filtering that needs to happen on some of these pages and some other wrap up stuff that we're doing.
+This, I think we oh, yeah, now that works.
+In enrichment hour. Yeah. Great.
+
+Wilson Rivas   5:53
+The All all course content and stuff like that. We're gonna do some filters in a an additional sub search so people can go to this page and there'll be a toggle on the left hand side and they can click which category they're looking for and this will autom.
+Update to kind of match those search options.
+
+Jeff Bailey   6:13
+Right, yeah.
+So just updating you folks there just some sort of usability changes and some making the navigation there easier and trying to get more content up in a way that people can can see?
+I don't know what this is related to.
+
+Xinru Liu   6:34
+I think this is just prank.
+
+Jeff Bailey   6:37
+Oh, OK.
+I I think we can skip that.
+Content catalog we kinda touched on that already UN project.
+How are we doing there, Sharon?
+You were still setting up DC1 and DC-2.
+
+Sharan Muthalayil   6:52
+Yeah, DC one took.
+
+Jeff Bailey   6:53
+OK.
+
+Sharan Muthalayil   6:54
+It's taking a long time because of the complexity.
+It's getting close I think.
+End of today or yeah. Hopefully by today most of the contents are in.
+
+Jeff Bailey   7:02
+Wrap it up today, yeah.
+OK.
+
+Sharan Muthalayil   7:06
+I'm just doing some cleanups and trying to reduce the warnings because most of the contents that we got from outside source was.
+Crap. Not not it.
+It's great, but very incoherent and.
+
+Jeff Bailey   7:21
+Right.
+
+Sharan Muthalayil   7:22
+Not done in the best practice.
+So it's causing issues.
+
+Jeff Bailey   7:25
+Right.
+OK.
+
+Sharan Muthalayil   7:27
+Next week, I'll continue with the DC-2 I have. Yeah.
+
+Jeff Bailey   7:31
+DC-2 and the bxp stuff for OK.
+
+Sharan Muthalayil   7:34
+Bxp, when I get some chance here.
+
+Jeff Bailey   7:37
+Great premier coaching.
+We already discussed that.
+Figured out which ones we want to do.
+I haven't actually reached out yet to Charles about that, but I will do that once I get a chance.
+New York life projects.
+Not really relevant.
+Exp beyond an AI?
+
+Xinru Liu   8:03
+Yeah.
+No, really updates.
+I think that it just ideas.
+We will probably resume that after we.
+Finish the Pinnacle series.
+And oh, sorry, that's a different thing that that that's about creating the group about.
+Culture like tech culture? Yeah. Beyond that, AI, nothing happened in the past week.
+Should I follow up with them to ask if we can set up a meeting?
+To talk more about how we could help.
+
+Jeff Bailey   8:38
+You wanna do that? Is that like?
+
+Xinru Liu   8:42
+I think that's something we could do, but it's not the really top priority.
+That's my feeling.
+What's everyone's thought?
+
+Jeff Bailey   8:53
+I think we got bigger fish to fry to be honest, but.
+
+Xinru Liu   8:56
+Right. And also I was a bit passive because I think is I was if.
+They the ball is on their hand. If they want to continue conversations, there is a clear next step to do is they could.
+Have some designers so coming to to talk with us to figure out exactly what they need.
+Yeah. And instead of us kind of chasing after say, hey, that's talk more about how we could help you if they didn't reach out.
+
+Jeff Bailey   9:32
+Yeah.
+
+Xinru Liu   9:33
+I guess it's not urgent.
+Yeah.
+
+Jeff Bailey   9:37
+Yeah.
+I would leave it in their court and if they reach out then then we can give them satisfaction.
+But but I I don't.
+Yeah, I wouldn't.
+I wouldn't pursue it if it's not.
+If it's not a a goal for you.
+
+Xinru Liu   9:55
+Mm H.
+
+Jeff Bailey   9:57
+Create a. So we did have the workshop this week.
+
+Xinru Liu   10:02
+Yeah.
+There was.
+There was some hiccups, but eventually we troubleshoot it.
+I think the updated version of the roll out package will work.
+I will talk meet with the same group who joined the workshop earlier this week just to ensure that their setup is working.
+And yeah.
+That's the current, umm, status of it.
+
+Jeff Bailey   10:28
+Great.
+Nine Tech alliance formation.
+
+Xinru Liu   10:35
+So that was kind of something I mentioned.
+I mean, that's what I thought about beyond AI, but it's different topic. I think the idea is to figure out a way we could better communicate our initiative for like roll out effort or anything kind of.
+That.
+Also.
+Require designers involvement.
+So to set up that communication channel more successfully there in the past, because the struggle is.
+What we have is talking with the director, so they may not have the full knowledge of what kind of people need to be assigned to this exercise.
+So the idea is to set up some communication channel or even alliances.
+I think the way we use alliances is beyond alliances.
+
+Jeff Bailey   11:22
+Mm.
+
+Xinru Liu   11:25
+There was idea thinking brought up.
+We can talk with jonce to see how they set up the Beyond Alliance, but.
+I think the whole conversation about this will be starting.
+Apartment to have finished the Pinnacle series.
+I think that's the intent and also I think.
+
+Jeff Bailey   11:41
+OK.
+
+Xinru Liu   11:44
+Beyond alliance could be one option.
+Another option could be maybe we can revive evolve which is another super group and set up some sort of monthly meetings that bring members or participants in that group to talk about or see what we're doing.
+So I think there are multiple strategies.
+We can approach, but a conversation we're not talking about it at the moment.
+
+Jeff Bailey   12:08
+I.
+Yeah, that's fine.
+I think the evolve approach is is the better one just because there's already that intellectual framework there. People know about it, it it sort of fits with some of these other super groups and so and there's billing codes and other things already created tied to that. So it.
+
+Xinru Liu   12:16
+Mm H.
+Mm hmm.
+Yeah, yeah.
+
+Jeff Bailey   12:26
+Makes it a little bit easier to pick that up again and run with it so.
+
+Xinru Liu   12:28
+That's a good point.
+Yeah.
+
+Jeff Bailey   12:32
+Just just my thoughts there but.
+
+Xinru Liu   12:35
+Yeah.
+
+Jeff Bailey   12:36
+OK.
+I guess I'm not gonna go through all of these. I think we can individually figure out where we're at with these and what what's, I don't know.
+I we can touch base on that stuff or not.
+
+Xinru Liu   12:47
+Yeah.
+
+Jeff Bailey   12:50
+I'm. Let's see.
+
+Xinru Liu   12:51
+Should we talk about the last cross team?
+There's AU proposal is submitted and also did we identify the premier coaching material? OK, yeah.
+
+Jeff Bailey   13:03
+Yeah, we did. So that's all set.
+Great. Cool.
+Hey Sajal, we were just wrapping up.
+Here we were going over the notes from last week and just commenting on all of the outstanding items trying to figure out where we stood with those.
+So that's that's what you missed.
+So moving on to new items here.
+It.
+So we've had a, a, a conversation this week pertaining to the Revit 2025 rollout.
+Basically, there's a couple pieces that need to be in place on our end.
+We need to update our Wizards, our project Creation Wizard to match the 2025 infrastructure.
+And then we need to make sure that there's enough.
+Space on people's machines to install the software 'cause it's a big piece of of software.
+The latest deployment.
+And we also need to make sure that all of the 2025.
+Plugins get installed after the case, so forma ID 8. All of those things we had a meeting to sort of line all this up. One of the outcomes from that meeting was that as a means of reducing the amount of.
+Of stuff people have on their machines, freeing up HD space that we would start to roll back or uninstall. Older versions of Revit, essentially anything that is Revit 2020 or before.
+The idea being that we're already on 2526 will be released in a few weeks and so you know we're we're we're basically looking sort of five years back.
+And if.
+Your project is more than five years old.
+It really should be upgraded anyways, otherwise it won't be stable in that in that older version won't be accessible very long.
+Because, yeah, these these projects are are the the versioning for Revit updates every year so.
+So, so yeah, that's the idea.
+So we're we're.
+Looking to put together some communications for that and get that started.
+And then one of the other things related to that was creating a bat file that we could run to clean up temporary file locations, cache locations and local Revit file locations.
+So all of that is just starting now.
+We're sort of starting these conversations based on what we understand in terms of like the lift for, for replacing the HD.
+Space on Focus's machines it's probably.
+We gonna be about mid June that we're targeting for for 2025 right now, although that might shift in either direction depending on all the different pieces in play here.
+So just wanted to sort of share with folks the general strategy there.
+Any comments, questions, thoughts.
+Concern.
+S.
+
+Wilson Rivas   16:20
+Is that that was a great recap to our conversations.
+Thanks Jess.
+
+Jeff Bailey   16:25
+Good. And then?
+Updating the blue we just went over that sagro.
+I'll I'll share with you, but we made some updates to.
+The Hlw University page just to refresh it a little bit, we added separate categories for design and delivery content and the hlw practice manual and next content.
+We're also adding some filters.
+And some other things to these pages to make it easier for folks to locate good content.
+And and just some other sort of quality of life improvements here to the the the learning content that we already have up on on blue.
+
+Sejal Sonani   17:10
+That's amazing.
+
+Jeff Bailey   17:10
+So that's that's ongoing.
+
+Sejal Sonani   17:11
+That looks good.
+
+Jeff Bailey   17:12
+We're we're wrapping that up over the next week or two and uploading.
+So we did do a actually we did a course related to ISO 19650.
+So that will also go up there so that other folks can make use of that training material as well.
+Alright, next topic, next week. I don't know if LA is doing this, but the New York office is doing the take your kid to work day.
+Next Thursday.
+So we've been sort of.
+Approached by the HR team.
+To help with some of the activities in the in the New York office. So like in last year's Singh room, we'll probably do a little print, a 3D print kids can take home a little trinket or something from from the 3D printer and then we.
+Do some VR setup for them so that they can experience the you know navigating the The Walking around in the VR space within our buildings.
+And then we typically do some games, VR games, things with them, 'cause they.
+A kid's name that holds their attention better than a boring office.
+So and then I know singhru you were sort of thinking about maybe doing some some sort of AI stuff, OK.
+
+Xinru Liu   18:35
+A better idea?
+Yeah, I tested.
+So I connect configur with a webcam.
+So now if we put it in the big screen, we have a webcam that kids can do whatever whatever they do and they generate some sort of, I don't know, portrait or cartoon or whatever.
+And we can print it for them.
+And I think that idea could have a spin off.
+We could think of like the webcam can look at a sketchbook or at a.
+Kind of a model space.
+Your leeeeo model and you put different model elements and kind of do quick prototyping design that could be more architectural, but I need to set up.
+
+Jeff Bailey   19:20
+Mm hmm.
+
+Xinru Liu   19:21
+I need some like station web background things like that. If we're doing the more like a model mock up things.
+
+Jeff Bailey   19:26
+Right.
+OK.
+
+Sejal Sonani   19:29
+For the for the future, right?
+Like for actually members of.
+
+Xinru Liu   19:32
+For the future, for the kids too.
+
+Sejal Sonani   19:35
+OK.
+Well, this is what you can do.
+
+Xinru Liu   19:36
+For both.
+
+Sejal Sonani   19:37
+That sounds like fun.
+I I know there was some conversations in California and New Jersey offices and all.
+I'm not sure where they ended.
+Jeff, can you or one of you talk to Lisa and see which offices are doing this and at what time?
+
+Jeff Bailey   19:51
+Blow up with her.
+
+Sejal Sonani   19:52
+So we can at least.
+
+Jeff Bailey   19:52
+Sure.
+
+Sejal Sonani   19:56
+California, we have the 3D printer, which we never use.
+It's on Manny's desk.
+So if you're doing something we can connect with that.
+
+Jeff Bailey   20:02
+Manny uses it.
+Manny uses it, but nobody else.
+
+Xinru Liu   20:07
+It doesn't have to be 3 two printer, I'm just using this like the junk. Umm. Jenga. Like any kind of a wood block.
+
+Sejal Sonani   20:07
+He was supposed to.
+He took it on.
+
+Xinru Liu   20:18
+I mean, it's for kids.
+
+Sejal Sonani   20:18
+To make that.
+
+Xinru Liu   20:19
+They can stack something.
+
+Sejal Sonani   20:21
+I know my. I know Manny wanted the 3D printers and it's on his desk. I had told him to start having more conversations with our team members to use it for other things.
+So I think it all goes back to Zen. Like we started talking to the designers.
+We are also with Caitlin doing.
+Design dialogue back in LA Office, which was more like internal design reviews. Once a month where we're gonna have topics about.
+AI stuff and just general project review and Design Shore EDS. So we can start looping that in on using some of the new technology.
+
+Xinru Liu   20:54
+Yeah.
+
+Sejal Sonani   20:56
+But that spot a later conversation.
+
+Xinru Liu   20:57
+Yeah.
+In my in my experiment today and yesterday, this works well if we do urban planning.
+
+Sejal Sonani   21:05
+Did you print those blocks?
+
+Xinru Liu   21:06
+Then instruct.
+
+Sejal Sonani   21:08
+No, what are those?
+
+Xinru Liu   21:09
+Yeah, I was. They. No, they they suggested blogs people in New York office know we have lots of puzzles and it's I just steal it from a desk.
+What? What?
+What I tried to say is.
+It generates urban design.
+Proposal well, because if you give them instructions, say these are buildings and you generate some sort of plans or like area view of a city or things like that.
+Instead of a particular kind of how to say interior scene?
+But maybe those will work too if instead of these blocks we have printed furniture.
+I don't know. Yeah.
+
+Sejal Sonani   21:46
+Maybe I understand.
+So is this a program or something?
+Our application that you're using with the Jenga blobs.
+
+Xinru Liu   21:52
+Yeah. So basically is the AI set up.
+So we have a confi UI. Some of you may be familiar.
+Anyway, it is a tool.
+Now I connected to a webcam so it captures things from the webcam.
+So imagine a camera that look at this and it capture that pictures and this picture become the the input like.
+To the AI processings and it will generate.
+Image based on you know this shape.
+Yeah. So that's what I'm saying, yeah.
+
+Sejal Sonani   22:29
+Understand that sounds fine.
+I'm sure people here can use that too.
+Architects can use it.
+
+Xinru Liu   22:34
+Yes. Yeah.
+Probably share some example later on.
+
+Sejal Sonani   22:41
+Sounds good.
+Sorry, Jeff, back to you.
+
+Jeff Bailey   22:43
+Yeah, no worries, no.
+So that that's on Thursday.
+So singhru, I don't know that we have exact timing for for each of the activities.
+So I I expect we'll hear from Lisa maybe later today or tomorrow or sorry next week. But let me let me follow up with her about the NJ and LE offices and I can figure out the timing as well.
+At that point.
+Cool.
+Renewal pricing for symmetry, we're still waiting on that sagel.
+We just haven't gotten that in from our consultant at symmetry.
+
+Sejal Sonani   23:23
+That's for Autodesk and everything.
+
+Jeff Bailey   23:23
+We're following up with them.
+We still have a couple weeks.
+We're we're we're still in the clear for now, but we're we're following up with them we've already.
+Yeah, we're we're on it.
+We're just, they haven't gotten back to us, so.
+So we're we're gonna, we expect something early next week.
+
+Sejal Sonani   23:39
+Do we?
+This is also for Autodesk Revit and everything right?
+That's from symmetry, so.
+
+Jeff Bailey   23:45
+Yeah, this is the renewals.
+
+Sejal Sonani   23:48
+Do we have?
+I mean, because we have a couple of weeks and they are taking some time to get back to us to be between you and Wilson have an understanding of what the current number of licenses are and what the threshold would be to reduce the number.
+For cost or any of that I'm looking for what decisions we need to make when you get the pricing back.
+
+Jeff Bailey   24:09
+So there there is several considerations there and I think we'll probably wanna take that conversation offline to figure out what the best strategy is, I think.
+Really critical to that conversation is gonna be an understanding of sort of what the prospects for the firm look like for the coming year and to understand whether we anticipate we just have to match our license and count to sort of meet what we expect.
+So there might be some ways that we can adjust our numbers to, you know, to generate some savings or or create some better strategic outcomes.
+But we just have to.
+We have to sort of understand a little bit from from you or from the leadership group sort of what the big picture looks like and then we can map our licensing strategy onto that.
+
+Sejal Sonani   25:02
+So I mean, I was hoping to have that conversation once you had more from synergy senior symmetry, but since they are taking time, I'm happy to have a preliminary conversation with the two of you. So I understand what the number says. Maybe if you want to sign time.
+Next week or so.
+
+Jeff Bailey   25:18
+OK, I can.
+I can put a meeting on your calendar. I'll find sometime next week.
+
+Sejal Sonani   25:24
+Because the following week I am in SF for most of the time.
+So next week is a good time to meet.
+
+Jeff Bailey   25:31
+Great.
+Cool.
+Other than that.
+Au proposals. So thank you very much.
+Singhru and Chenzhang both put together some amazing proposals and submitted them yesterday to Autodesk University.
+It will probably take a month or two for them to come back to us, whether we we were accepted or not, but some excellent ideas there.
+Do you guys want to just do like a a Cole's note version of?
+And it top line summary of sort of what your your topic is.
+Seeing everyone.
+Chenzhang, just like the the the like two sentence elevator pitch version.
+
+Xinru Liu   26:24
+OK.
+So my the title of it is about.
+I think I'll just call it like a playbook. 101 of setting up your private AI server.
+So the idea is to kind of share knowledge of how or some rough guidelines for people to set up their own private servers to be able to use AI in architecture design process.
+And the proposal will, in the proposal I I said, we will create some sort of menu that will help us document our own effort.
+But talk more like sort of overall sort of guidelines and instructions of how that could be done and also want to talk about the importance and why we need to have a private AI server instead of using a third party tool just because of our own experience working.
+With multiple different AI softwares and the UNPREDICTABILITIES in terms of ownership and just in general the AI regulations very very.
+Sort of basic and with a lot of.
+Just a volatile place.
+So talking about that maybe.
+Sorry I didn't prepare a pitch so this just very rough.
+
+Jeff Bailey   27:42
+Sorry to put you guys on the spot there.
+
+Sejal Sonani   27:43
+This is getting out, but that's good.
+I mean, you did a good job.
+I understood what you were trying to say.
+Who else had one? Shenzhen.
+
+Chenzhang Wang   27:51
+Yeah, I got one.
+So the title is like you already have the license. How to build it and or purchase the right AI system with the APS?
+So basically the idea is like, you know, everyone attending the AU have the Autodesk license are usually gonna be a pack.
+There's a lot of good service, but there's a lot of other service that nobody gonna touch, for example like their model data API's. Pretty cool, pretty good. But it just people don't know how to use it and also like.
+This year's topic is about like how to embrace the AI technologies in our industry.
+I think like for a lot of people they they like this idea, but they don't know how to start it.
+So I submit this proposal to give a guidance like how can we utilize the existing data in our system to integrate and maybe for some firms to purchasing a AI system to assist their business development or daily operation.
+I'm gonna use the example.
+Or as a internal initiative for RFP processes. Working with our marketing team to demonstrate this one and similar to Xinru's idea, this is aiming to give a guidance of the firms, not like a technical workshop.
+
+Sejal Sonani   29:09
+Good and.
+Have we?
+Do we know if any of these topics?
+I know some of them are being discussed at the IDC or any other.
+Large, firm, roundtable sides of things.
+
+Jeff Bailey   29:24
+Not directly, not the not the specific.
+Use cases that we're exploring here.
+But there's some similar.
+Topics or or or areas of of of research but but these specific.
+Avenues are are, I think, somewhat unique.
+
+Sejal Sonani   29:46
+Yeah. And specifically tell remind me what is involved in submitting a proposal to AU as in, if we submit more than one proposals, what's the cost?
+What's the time involved for you all to put in there?
+
+Jeff Bailey   29:58
+Is.
+So, so Autodesk University is just a a conference.
+
+Sejal Sonani   30:06
+OK.
+
+Jeff Bailey   30:06
+This year, I believe it's being held in Nashville.
+And I think it's coming up in September. It's usually I think about four days and it is primarily just sort of.
+Partially. There's some some big announcements, that's where Autodesk makes all of their big announcements around direction.
+New software, new features, those kinds of things.
+All of that gets announced at the conference as well as there's a huge amount of network.
+And courses that happen.
+So that's why they call it Autodesk University.
+These are all the sort of top people from all over the world.
+Show up.
+They submit these proposals.
+It's just a couple of pages you write out your abstract.
+Who the user or the audiences for it? And like what the sort of, there's a whole bunch of fields you have to fill out.
+And essentially it's free if you are selected, you get a free.
+Access free free ticket to the conference, which is nice.
+It doesn't include airfare or anything like that, but but it it, it's still, you know, substantial savings there.
+And the yeah. And and you get to sort of represent the firm globally to all the sort of chief technology officers and the top BIM managers from all all the top firms around the world.
+So it's it's a real good way to.
+Share the the the work that we're working on and and elevate the profile of hlw within the sort of AEC industry and and specifically the sort of niche BM part of that.
+
+Sejal Sonani   31:56
+That makes sense.
+I mean, AU has been great and I know you all came here in San Diego, so I've been following that just to know what the protocol was for the proposals.
+So I mean, I'm team if you both want to spend the time to submit the proposals and see where it goes.
+
+Jeff Bailey   32:13
+Yeah. So we've submitted them.
+We're just waiting to hear back, and yeah, maybe a month or so we should get word and then pick it from there.
+
+Sejal Sonani   32:24
+Sounds good.
+Keep me posted even if we don't get awarded.
+So if we can strategize if if we need to attend it regardless and there.
+
+Jeff Bailey   32:35
+I think we should should have that conversation, yeah.
+Next item.
+The template talk newsletter.
+So that is all set.
+This is more related to sort of the the PDD group and the Template Focus group that we run, but we've sort of set up a new a new newsletter all about doors and some of the changes around doors.
+We basically recently we.
+Actually not that recently anymore.
+But at some point we had adopted the SDI Steel Door Institute nomenclature for doors and integrated that into our practice.
+So this goes through some of the particulars there and some of the.
+Picks and clicks for how to control your doors.
+Like how to control the swing.
+Do you want 90 degrees, 45?
+Where do you want your the the sort of frame to be?
+Do you want it in the middle?
+In the front in the back.
+You know, so there's there's a lot of different parameters that you can control.
+So it's just going through all that and sharing that.
+So that is all set.
+We're just gonna put together an HTML version to send out early next week.
+We anticipate probably Tuesday that'll go out for folks.
+To just letting folks know there to keep their eyes out for that.
+Coaching we met last week with Autodesk about these premium coaching options.
+I still have to follow up with them to line up those classes.
+So I'm I'm on, just haven't gotten to it yet.
+Content catalog launch.
+So we did launch content catalog, we talked about this a little bit at the outset.
+Sagel it's been relatively successful.
+There's been a few hiccups with the platform itself.
+Generating errors. We have logged all those tickets with Autodesk directly and they are sort of wading through them slowly.
+There's really nothing else we can do.
+Except wait for their development team to to get on it.
+The inside scoop that we have from, from the sort of contacts there is that.
+They are underwater on this project.
+Basically they they have way too many requests and way too many development support tickets and way too many customers reaching out saying like this doesn't work.
+Stuff's broken, and so I think that they're pretty.
+They're scrambling over to try to.
+Try to fix things so it does mean that it it's a little bit slower when we when we have tickets coming through, but we have left open our.
+V Drive location where we keep all of our families just for those folks who are having that issue, they will still have access to all of our families.
+So so that works I think.
+Wilson yesterday you swapped the permissions or a couple days ago you swapped the permissions, did you?
+Did we ever verify or validate that those had been reset or I guess you just said it would take a few hours, but we never followed back to make sure it was.
+
+Wilson Rivas   36:00
+Sorry, it was on mute.
+Yep. Let me just double check with John that they were completed.
+I had him on this so.
+
+Jeff Bailey   36:05
+Awesome.
+Perfect. Cool.
+Other big stuff Sajal.
+This is maybe the I don't know how familiar you are with this project, but one of our big projects are actually sort of client facing projects.
+Recently has been a JP Morgan Chase project and that is wrapping up now.
+
+Sejal Sonani   36:26
+Thanks.
+
+Jeff Bailey   36:29
+Just yesterday I uploaded all of the latest versions of our models. The 100% CD models, IFC files and coordination reports.
+To that.
+Location. So we're we're we're basically done at this point.
+So we're gonna take a back seat.
+We're sort of stopping sort of work on that, but the project will continue through construction and then we will have a small piece right at the very end reviewing the models that the contractors continue to develop through the construction process.
+So but for for for that, it's it's a big win for us it's been.
+
+Sejal Sonani   37:10
+That's amazing.
+
+Jeff Bailey   37:11
+I don't know six months, something like that. We've been working on this so.
+
+Sejal Sonani   37:12
+I know it was a big.
+
+Jeff Bailey   37:16
+Yeah. And I just wanna say thank you to Sharon.
+
+Sejal Sonani   37:16
+Well.
+
+Jeff Bailey   37:18
+Sharon Hercule and effort cleaning up the models and dealing with some less than.
+Favorable model conditions, shall we say, some of the.
+Team had been a little bit negligent in their modeling, in their tidying things up after themselves.
+So, but that's these things happen.
+So thank you, Sharon.
+That was.
+I know that was a a big lift on your end so. So thank you for.
+
+Sharan Muthalayil   37:47
+My shoes.
+
+Jeff Bailey   37:48
+Getting that done, it's it's not fun, but.
+
+Sharan Muthalayil   37:51
+Yeah.
+
+Jeff Bailey   37:52
+It's glad, glad it, glad it got done.
+And we're we're we're done with the hard part now.
+So it's just.
+
+Sharan Muthalayil   37:56
+Yeah, that's a good learning curve.
+
+Sejal Sonani   37:57
+That's great, John.
+
+Sharan Muthalayil   37:58
+Also on the project like the whole setup and.
+
+Sejal Sonani   38:02
+And also what did we give the feedback to the team members on how to do it right going forward and the nicest possible way?
+
+Sharan Muthalayil   38:04
+What?
+We've been doing that.
+
+Jeff Bailey   38:10
+Yeah, we've, we've given that feedback a few times already.
+
+Sharan Muthalayil   38:13
+Should I?
+
+Jeff Bailey   38:14
+It's it was just a bandwidth issue to be honest, they I think.
+
+Sejal Sonani   38:14
+OK.
+That makes sense.
+
+Sharan Muthalayil   38:18
+It's.
+
+Sejal Sonani   38:19
+What about Slantis scope on that project?
+
+Jeff Bailey   38:23
+Yep. So we're done. Yep.
+
+Sejal Sonani   38:23
+Are they done?
+Are they are done right?
+
+Sharan Muthalayil   38:24
+They done last week, yeah.
+
+Jeff Bailey   38:26
+They're done.
+Yeah. So they finished on Friday last week.
+So they are no longer part of the project.
+It's they're they're.
+
+Sejal Sonani   38:35
+And did you all like working with them in terms of the scope that they did?
+
+Jeff Bailey   38:38
+Yeah.
+
+Sharan Muthalayil   38:38
+Yeah, really good. Yeah.
+
+Sejal Sonani   38:39
+Yeah, I didn't meet with Andy, the owner of sneakers when she was in California. And we've started a few conversations, so that's good to know.
+
+Jeff Bailey   38:40
+Yeah, they were excellent.
+
+Sejal Sonani   38:47
+And then, Jeff, on that note, I haven't checked with Jack on SPO project YouTube, where we have a standalone scope, so.
+
+Jeff Bailey   38:55
+Yeah, we got a yeah, I was.
+I was hoping he would have a a scope of work set up there for for for that that we could share. I I got a follow up with him on that.
+
+Sejal Sonani   39:06
+I think he maybe set up a separate call because he may need some help writing the actual scope of work.
+
+Jeff Bailey   39:07
+It's just.
+Been.
+OK, sure.
+
+Sejal Sonani   39:13
+He's not very rabbit savvy in that sense, so he will need some feedback from you.
+
+Jeff Bailey   39:18
+OK, I will.
+I'll I'll tag up with him next week to to get that set up.
+
+Sejal Sonani   39:23
+Essentially, what what a contractor NBXP requires us to do. I think Bxp is where we should be relying on and what is our capabilities and how much help we need.
+So if we the reason I need a very precise scope of work is because technocrat has been coordinated for level 10 in the office.
+So they are at the site office so and they are helping other consultants.
+So we can get a proposal from them.
+
+Jeff Bailey   39:48
+Yeah.
+
+Sejal Sonani   39:48
+But we have worked with and we like them and they note our system so.
+If it's, we can compare apples to apples then.
+
+Jeff Bailey   39:53
+Yeah.
+Yeah. Yeah. No, that makes sense, yeah.
+I will.
+I'll take up with Jack about that.
+
+Sejal Sonani   39:59
+And while we're on the topic before we jump off and if we need to do a separate one for experience, we can.
+How are we doing on the rest of the large projects?
+Federal Reserve algun.
+
+Sharan Muthalayil   40:14
+Yeah, it's it's good.
+We are going to reach I think 50% DD DD issuance.
+In the end of the month.
+So they're working towards that, we.
+Got the new add in for landscape part of the project.
+
+Sejal Sonani   40:30
+OK.
+
+Sharan Muthalayil   40:30
+We'll just install for one person.
+So I'm gonna touch base with Ziyao and go through the process if he has any issues with the tool using the tool for the landscape scope.
+Thing rest there is no issues.
+We still have to have another call with GC regarding how we gonna collaborate on adding them to our hub and.
+See what their requirements are on the information that they need in terms of asset and Cobie data. So that is an ongoing conversation that we need to have.
+
+Jeff Bailey   41:07
+Right.
+
+Sharan Muthalayil   41:09
+Umm.
+
+Sejal Sonani   41:09
+We should you. I'm assuming you have a bxp on that and our expectations are clearly laid out on what we can and cannot do for California or for the GC, OK.
+
+Sharan Muthalayil   41:18
+Yep, Yep.
+
+Sejal Sonani   41:23
+Do you attend any of the internal team meet?
+
+Sharan Muthalayil   41:24
+Not sorry, not for GC for the client and within the consultant like I don't think we specify.
+
+Sejal Sonani   41:25
+Sorry, go ahead.
+
+Sharan Muthalayil   41:35
+A requirement for GC in rbxp.
+
+Sejal Sonani   41:38
+Yeah.
+
+Jeff Bailey   41:39
+Kinda goes to 100% CDs and what we're waiting for is so that we're working with Turner as the construction company and we're waiting for them to come back with a bxp for their portion of the work.
+
+Sharan Muthalayil   41:39
+Yeah, yeah, yeah.
+CDs and then handle.
+
+Jeff Bailey   41:53
+So we kind of write our piece for all the way through 100% CDs and then they kinda take it over and and they may have different criteria than I than us for for sort of how they manage their processes a little bit through construction or the.
+Tools that they use.
+And so they write their own bxp share it with us. Make sure everybody's on the same page.
+And we've been waiting a couple weeks for that from from them.
+
+Sejal Sonani   42:15
+That's what.
+
+Jeff Bailey   42:18
+I I think they're kind of behind on this stuff and they they're scrambling there to kind of get up to speed on the project so.
+
+Sejal Sonani   42:25
+That makes sense.
+
+Jeff Bailey   42:25
+That's that.
+
+Sejal Sonani   42:26
+I think for future it's at least helpful to have a conversation with the project manager and from our team to understand the scope or guide them. What we would be doing in California because like we are seeing in the SPO project now, some of the GCS require every.
+
+Jeff Bailey   42:39
+We had.
+
+Sejal Sonani   42:44
+Week model updates and we should at least define what a fee covers and then if AGC comes back and has a higher expectation.
+
+Jeff Bailey   42:48
+Right.
+
+Sejal Sonani   42:52
+Then we have a basis to go back and ask for add services.
+Because quite often S Bo was unique.
+Because we it's design build and we had to figure all those things out early on with the GC. But most projects we don't have the GC on board like in Federal Reserve until later. So at least we should RBXBS should cover basic understanding for.
+Ca scope.
+
+Jeff Bailey   43:14
+Yeah, yeah, I mean.
+The the the sort of scope of the BIM execution plan really is around the BIM and we don't control the construction administration process that is usually defined by the contractor. They will loop us into their procore or they will, you know, have their own system set up for.
+For handling California, so and and like you say, we don't really know what that looks like until.
+Our piece is done.
+
+Sejal Sonani   43:46
+But our fee.
+Our fee for the California scope is always defined.
+Like how many punch lists will do what?
+Rfis and some medals will write all of that, so as part of that I think it's a bigger conversation that we can have separate meeting with the project management tool whether what is a basic expectations are we for large projects like this.
+Are we talking about updating all of the rfis?
+In the model and syncing it every two weeks.
+And keeping it updated like what Google expected us to do. Or if they changed their.
+Protocol like having a boss system which is IoT system that Google requires and then they come back and say you should put all of this in your construction administration tagging things we don't have the fees to do that sometimes. So I do think that's a gap because we.
+Do when we do our proposals and contracts as architects, we give them California scope.
+And KSEFES.
+We don't tell that at the start of the project.
+
+Jeff Bailey   44:44
+Right.
+
+Sejal Sonani   44:46
+We don't tell them we'll wait for the GC to tell us.
+
+Jeff Bailey   44:47
+That.
+
+Sejal Sonani   44:49
+So I think now that all clients are working so much and we need to have a common understanding of what's covered in our basic services.
+
+Jeff Bailey   44:57
+Right. But in terms of like the BIM scope there, there really isn't any except for supporting the project team. The designers, architects, PMS to continue to do the same processes that they had been doing throughout the the rest of the project.
+So things like that, packaging and publishing and exchanging drawings.
+But there isn't really like, that's not.
+A.
+Not really a service.
+It's just sort of like standard operating procedures.
+So we don't write that into the bxp because there just isn't really.
+Like like the the what you're talking about is is absolutely important.
+But doesn't that get captured in the contract and in the in the in the work plan and like the No OK.
+
+Sejal Sonani   45:45
+No, I mean not in clear.
+
+Jeff Bailey   45:46
+So maybe, yeah, maybe we got to have a conversation then.
+
+Sejal Sonani   45:48
+Yeah, we, I'll, I'll share with you what we put in the CS scope. And I think because there is a lack of understanding sometimes from the project management putting this proposals together.
+
+Sharan Muthalayil   45:49
+Hello this.
+
+Jeff Bailey   45:51
+OK.
+
+Sejal Sonani   45:59
+Even if it's not included, we should say it's excluded these kind of things are excluded and would be additional services or have a protocol that will be syncing the model once a week or once a month. At least us internally should have those conversations.
+So we can identify that our team here, four people, how much time is required in ca like for JPMC, we don't know what's required NCA because we are saying we are done and we don't.
+We only have minimal hours of our team.
+We'll see what they want and if they want more, we can go back and ask for it.
+So I think that's as we're trying to get our time, more billable and have our project management teams understand and maybe Jeff, what we could do is if you take a look at it.
+You and I can have a conversation with the project management Task Force and Johanna to see how our templates can be adjusted better to cover that and the proposals come so we can address that not to take away more time from here, but anything else on London project.
+
+Jeff Bailey   46:54
+Yeah.
+Yeah.
+
+Sejal Sonani   47:01
+Steve is fine with doing what he's doing and I know Jeff, you are working on the Amazon project here, which is gonna turn into a bigger thing.
+
+Jeff Bailey   47:05
+Yep.
+
+Sejal Sonani   47:09
+So thank you for the help on that.
+
+Jeff Bailey   47:12
+Yeah, no worries.
+
+Sejal Sonani   47:12
+But Chanel, we are staying OK on project related stuff.
+OK.
+
+Wilson Rivas   47:22
+Yeah, there was one more question regarding the Pinnacles series training that you wanted to ask Sajal.
+
+Jeff Bailey   47:22
+So.
+Oh yes, that's right. Sorry.
+Good, good catch.
+So yeah, we came across some issues with the Pinnacle series rollout.
+So we realized that some of the Pro core cut questions are actually practical questions.
+They're not just knowledge based questions.
+So what that means is they're actually asking you to log on to pro core, and like, you know, toggle some things, do some manipulations within that environment, and then report on what you the outcome there and that.
+Is either right or wrong and and it it gets fed back into the assessment.
+The issue is that we don't have an instance of pro core for folks to use.
+So there's kind of two approaches we could take.
+One is like, well, I guess there's three approaches.
+One is we remove all Pro core training from the whole from the assessments altogether and just kind of drop that for this year and then we we we figure that out another time.
+The second one is we just we we go back through those pro core questions, remove the practical questions only and just keep the knowledge questions.
+I I'm not exactly sure of like how editing tests that are already sent out works, so I gotta tag up with the Pinnacle series team to make sure that that's doable.
+Otherwise, I might have to like.
+Basically, drop people's current assessments and then reassign a new version of the test.
+Depending on that.
+So that's an open question or the OR the 3rd way we could handle this would be to just get a few seats of Pro Core that people could play in as a sandbox and use for the purposes of of this assessment.
+But I think it really depends on sort of what the the the goal was of including all of those procore elements in the in the assessment to begin with.
+
+Sejal Sonani   49:15
+No.
+I don't know if we had the option to opt in for questions or not with Pinnacle or that comes with their default.
+
+Jeff Bailey   49:34
+It's it's based on the the like cohorts, the different cohorts that we had, we had a little remember there's that sort of matrix.
+Let me see if I can pull it up.
+And so depending on the US.
+Ers. Some people would have.
+So for instance, it's this one here.
+So, for instance, junior designers and job captains don't have this pro core stuff in their assessment.
+But the intermediate designers?
+The job Captain Architects, Project Architects, senior designers, et cetera.
+I'll. I'll have it. So all of the green ones have it and the red ones do not.
+
+Sejal Sonani   50:15
+Yeah, I don't remember.
+I mean, I know this was a little before.
+I think we should drop Pro core as part of this exercise as my initial reaction, because not even the Pro core is predominantly used. Not not every project uses prok or we have all kinds of other environments that GCS also use. Some use plan grade, some use 3.
+
+Jeff Bailey   50:24
+OK.
+
+Sejal Sonani   50:39
+60 and other things.
+And I want to take a second look at this and ask the project managers because.
+In our office, Evan Junior job Captains use Pro core.
+More so than PMS for RFI, submittals and things like that.
+
+Jeff Bailey   50:56
+Right.
+
+Sejal Sonani   50:57
+So.
+Maybe we keep this only to BEM and.
+Sorry Zen, we ran late today, so we can have catch up on experience and later.
+
+Xinru Liu   51:09
+OK.
+Yeah, no problem.
+I just need to troubleshoot some critter AI rollout stuff.
+Feel free to join me if you guys finish this one.
+
+Jeff Bailey   51:17
+You bet.
+Thanks xinru.
+
+Sejal Sonani   51:17
+OK. And yeah, if it's easy to drop it the same and send some communications around that, if you have ran into this issue, we are gonna push that to later.
+
+Xinru Liu   51:18
+OK, bye.
+
+Jeff Bailey   51:29
+OK.
+
+Sejal Sonani   51:30
+Any other things that we are getting feedback on Pinnacle?
+
+Jeff Bailey   51:39
+Just, you know, the typical sort of general confusion sort of people.
+We've had some people flagging the emails as spam the welcome emails to get them started.
+They're flagging them out of spam.
+So we've been reaching back out to those people to let them know it's legitimate. Please, at least you know it's a good instinct if you see an unfamiliar e-mail.
+
+Sejal Sonani   52:01
+It's all because of everything that Wilson keeps pushing out. You know, you've sent so many emails of spam from my account that now no one responds to my emails.
+
+Jeff Bailey   52:05
+Yeah.
+
+Sejal Sonani   52:13
+The first is single Sejal fishing in.
+
+Jeff Bailey   52:17
+Yeah.
+So.
+
+Sejal Sonani   52:19
+All right.
+
+Wilson Rivas   52:20
+They're being vigilant.
+Maybe we can tone it down a little bit.
+It's it's one a month, so it shouldn't be that many.
+
+Sejal Sonani   52:27
+Well, I think because majority of them report to me, it's whoever reports to it goes from and now it's become a running joke that I send all the spam and mails out.
+
+Jeff Bailey   52:39
+All right. So I think that's it covers the majority.
+
+Sejal Sonani   52:41
+Anything else?
+Sounds good.
+All right.
+Thank you so much for everything. And Wilson, welcome back from your vacation. Did we update teams?
+
+Wilson Rivas   52:55
+Oh, that nothing Major recently.
+
+Sejal Sonani   52:57
+All the.
+All the platforms and the teams have changed. In other words, it's the, it's the user interface that has changed.
+
+Wilson Rivas   53:07
+Oh yes, there was a a communication out around that. They merged some of the options a little while ago, but you can't opt out of it if if you don't like the new change.
+
+Sejal Sonani   53:17
+No, that's OK.
+I just.
+I'm fine with it.
+I just get questions from people that we update to new teams and like I don't know. So if the communication was sent out, people are just ignoring it.
+I do have one thing for future meetings I knows in had to drop off, which is fine. But Wilson, when you get a chance, I wanna understand what the SketchUp license renewal timeline is and how we can downsize that with the newforma renewal timeline is. And so I.
+
+Wilson Rivas   53:30
+Maybe going to have to refresh.
+
+Sejal Sonani   53:48
+Can help get a resolution for that and the and then if there are any other.
+Applications that we need to revisit for licensing.
+
+Wilson Rivas   53:58
+OK, I can get a list ready and send that over early next week and then on the on the call we can kinda have a conversation on them or if you have any questions I can follow up throughout the week.
+
+Sejal Sonani   54:08
+Yeah, I I'm thinking as we talk about seeds very high level for Autodesk. I think if we can also have information about those licenses, we can have a comprehensive license numbers and what's needed kind of conversations for some of the major expense.
+
+Wilson Rivas   54:24
+Yeah, sounds good. OK.
+
+Sejal Sonani   54:25
+So maybe we can do that when the three of us meet next week.
+
+Wilson Rivas   54:29
+OK.
+
+Sejal Sonani   54:29
+All right. Have a good weekend. Bye.
+
+Jeff Bailey   54:31
+Thanks guys.
+Take care. Bye.
+
+Sejal Sonani   54:32
+OK.
+
+Jeff Bailey stopped transcription

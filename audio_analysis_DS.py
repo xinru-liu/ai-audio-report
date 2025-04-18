@@ -2212,7 +2212,7 @@ def generate_conference_notes(transcript,segments, summaries, topics, action_ite
 # ==========================================
 # MAIN EXECUTION
 # ==========================================
-def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language=None, segment_length=0, clean_repetitions=False):
+def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language=None, segment_length=0, clean_repetitions=False, transcribed_text_path=None):
     """
     End-to-end process from audio file to conference notes.
     
@@ -2221,6 +2221,9 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
         model_size (str): Whisper model size
         use_gpu (bool): Whether to use GPU acceleration
         language (str): Optional language code to force language detection
+        segment_length (int): Length in seconds for audio segmentation (0 = no segmentation)
+        clean_repetitions (bool): Whether to clean repetitions in transcript
+        transcribed_text_path (str): Optional path to already transcribed text file to use instead of audio
         
     Returns:
         dict: Paths to generated outputs
@@ -2240,73 +2243,98 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
     }
     
     try:
-        # Step 1: Load and process audio
-        processed_audio = load_audio(audio_path)
-        
-         # Step 2: Check if we should segment the audio
-        if segment_length > 0:
-            print(f"Segmenting audio into {segment_length}-second chunks...")
-            segment_files = segment_audio_file(processed_audio, segment_length)
-            print(f"Created {len(segment_files)} segments")
+        # Check if we're using an existing transcript
+        if transcribed_text_path:
+            print(f"Using existing transcript from: {transcribed_text_path}")
             
-            # Transcribe each segment
-            full_transcript = ""
-            all_segments = []
-            
-            for i, segment_file in enumerate(segment_files):
-                print(f"Transcribing segment {i+1}/{len(segment_files)}...")
-                segment_result = transcribe_audio(segment_file, model_size, use_gpu, language)
-                full_transcript += segment_result["text"] + "\n\n"
-                all_segments.extend(segment_result.get("segments", []))
+            # Read the transcript file
+            with open(transcribed_text_path, 'r', encoding='utf-8') as f:
+                transcript = f.read()
                 
-                # Clean up memory after each segment
-                if use_gpu and torch.cuda.is_available():
-                    torch.cuda.empty_cache()
+            print(f"Loaded transcript with {len(transcript)} characters")
             
-            # Create a combined result dictionary
+            # Create a basic result dictionary (without timing info)
             transcription_result = {
-                "text": full_transcript,
-                "segments": all_segments
+                "text": transcript,
+                "segments": [{"text": transcript}]  # Simple segment structure
             }
-            # Use full_transcript for all subsequent processing
-            transcript = full_transcript
+            
+            # Save path to transcript
+            outputs["transcript_txt"] = transcribed_text_path
+            
         else:
-            # No segmentation, transcribe the whole file
-            transcription_result = transcribe_audio(processed_audio, model_size, use_gpu, language)
-            transcript = transcription_result["text"]
-
-        transcript = transcription_result["text"]
-        
-        # Save paths to outputs
-        base_name = os.path.basename(audio_path).split('.')[0]
-        transcript_path = os.path.join(OUTPUT_DIR, f"{base_name}_transcription.txt")
-        outputs["transcript_txt"] = transcript_path
-        
-        # Save the full transcript
-        with open(transcript_path, 'w', encoding='utf-8') as f:
-            f.write(transcript)
-
+            # Regular audio processing path
+            # Step 1: Load and process audio
+            processed_audio = load_audio(audio_path)
+            
+            # Step 2: Check if we should segment the audio
+            if segment_length > 0:
+                print(f"Segmenting audio into {segment_length}-second chunks...")
+                segment_files = segment_audio_file(processed_audio, segment_length)
+                print(f"Created {len(segment_files)} segments")
+                
+                # Transcribe each segment
+                full_transcript = ""
+                all_segments = []
+                
+                for i, segment_file in enumerate(segment_files):
+                    print(f"Transcribing segment {i+1}/{len(segment_files)}...")
+                    segment_result = transcribe_audio(segment_file, model_size, use_gpu, language)
+                    # Add a delimiter between segments for better separation
+                    segment_text = segment_result["text"].strip()
+                    full_transcript += segment_text + "\n\n--- SEGMENT BREAK ---\n\n"
+                    all_segments.extend(segment_result.get("segments", []))
+                    
+                    # Clean up memory after each segment
+                    if use_gpu and torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                
+                # Create a combined result dictionary
+                transcription_result = {
+                    "text": full_transcript,
+                    "segments": all_segments
+                }
+                
+                # Make sure we're using the full transcript for all subsequent processing
+                transcript = full_transcript
+                print(f"Combined transcript from {len(segment_files)} segments, total length: {len(transcript)} characters")
+            else:
+                # No segmentation, transcribe the whole file
+                transcription_result = transcribe_audio(processed_audio, model_size, use_gpu, language)
+                transcript = transcription_result["text"]
+            
+            # Save paths to outputs
+            base_name = os.path.basename(audio_path).split('.')[0]
+            transcript_path = os.path.join(OUTPUT_DIR, f"{base_name}_transcription.txt")
+            outputs["transcript_txt"] = transcript_path
+            
+            # Save the full transcript
+            with open(transcript_path, 'w', encoding='utf-8') as f:
+                f.write(transcript)
+                
+            # Save JSON with timing if available
+            json_path = os.path.join(OUTPUT_DIR, f"{base_name}_transcription.json")
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(transcription_result, f, indent=2)
+            outputs["transcript_json"] = json_path
+            
+            print("\nTranscription complete! Beginning analysis phase...")
 
         # Apply repetition removal if requested
-        if clean_repetitions:  # Add this parameter to the function
+        if clean_repetitions:
             print("Cleaning up repetitions in transcript...")
-            cleaned_path = remove_repetitions(transcript_path)
+            # Use the appropriate source path
+            source_path = outputs["transcript_txt"] or transcribed_text_path
+            cleaned_path = remove_repetitions(source_path)
             outputs["transcript_txt_cleaned"] = cleaned_path
             
             # Use the cleaned transcript for further analysis
             with open(cleaned_path, 'r', encoding='utf-8') as f:
                 transcript = f.read()
-                    
-        # Save JSON with timing if available
-        json_path = os.path.join(OUTPUT_DIR, f"{base_name}_transcription.json")
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(transcription_result, f, indent=2)
-        outputs["transcript_json"] = json_path
+                
+        # Process the transcription using the FULL transcript
+        print(f"Analyzing full transcript of {len(transcript)} characters...")
         
-        # Let the user know transcription is done and analysis is beginning
-        print("\nTranscription complete! Beginning analysis phase...")
-        
-        # Process the transcription
         # Step 3: Segment transcript
         segments = segment_speakers(transcript)
         
@@ -2314,14 +2342,14 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
         topics = extract_topics(transcript, use_gpu=use_gpu)
         
         # Step 5: Create word cloud
-        wordcloud_data = create_word_cloud(transcript)  # Now returns (path, base64)
+        wordcloud_data = create_word_cloud(transcript)
         outputs["wordcloud"] = wordcloud_data[0] if wordcloud_data else None
         
         # Step 6: Summarize transcript
         summaries = summarize_transcript(segments, use_gpu=use_gpu)
         
         # Step 7: Extract action items
-        action_items = extract_action_items(summaries, use_gpu=use_gpu)
+        action_items = extract_action_items(transcript, use_gpu=use_gpu)
         
         # Step 8: Identify entities
         entities = identify_entities(transcript)
@@ -2330,10 +2358,16 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
         takeaways = generate_key_takeaways(transcript, summaries, topics, use_gpu=use_gpu)
         
         # Step 10: Visualize topics
-        topic_viz_data = visualize_topics(topics)  # Now returns (path, base64)
+        topic_viz_data = visualize_topics(topics)
         outputs["topic_viz"] = topic_viz_data[0] if topic_viz_data else None
         
         # Step 11: Generate conference notes
+        # Create an appropriate base name for output files
+        if transcribed_text_path:
+            base_name = os.path.basename(transcribed_text_path).split('.')[0]
+        else:
+            base_name = os.path.basename(audio_path).split('.')[0]
+            
         notes_path = generate_conference_notes(
             transcript,
             segments,
@@ -2342,12 +2376,12 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
             action_items,
             entities,
             takeaways,
-            wordcloud_data,  # Pass both the file path and base64 data
+            wordcloud_data,
             topic_viz_data
         )
         
         outputs["notes_md"] = notes_path
-        outputs["notes_html"] = os.path.join(OUTPUT_DIR, "conference_notes.html")
+        outputs["notes_html"] = os.path.join(OUTPUT_DIR, f"{base_name}_conference_notes.html")
         
         # Print completion message
         print(f"\n{'='*50}")
@@ -2360,8 +2394,9 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
         print(f"2. Conference Notes (HTML): {outputs['notes_html']}")
         print(f"3. Word Cloud: {outputs['wordcloud']}" if outputs['wordcloud'] else "3. Word Cloud: Failed to generate")
         print(f"4. Topic Distribution: {outputs['topic_viz']}" if outputs['topic_viz'] else "4. Topic Distribution: Failed to generate") 
-        print(f"5. Transcript: {outputs['transcript_txt']}")
-        print(f"6. Detailed Transcript with Timing: {outputs['transcript_json']}")
+        if not transcribed_text_path:
+            print(f"5. Transcript: {outputs['transcript_txt']}")
+            print(f"6. Detailed Transcript with Timing: {outputs['transcript_json']}")
         
         return outputs
     
@@ -2369,113 +2404,6 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
         print(f"\nERROR: An error occurred during processing: {e}")
         traceback.print_exc()
         return outputs  # Return whatever outputs were successfully generated
-
-if __name__ == "__main__":
-    try:
-        print("\n" + "-"*60)
-        print(" Audio Transcription and Analysis Tool")
-        print(" Windows Local Setup with NVIDIA GPU Support")
-        print("-"*60 + "\n")
-        
-        # Check system requirements
-        have_ffmpeg = check_ffmpeg()
-        if not have_ffmpeg:
-            print("WARNING: FFmpeg not found. Audio conversion may not work.")
-            print("Please install FFmpeg and add it to your PATH.")
-            
-        # Check if GPU is available and configured
-        use_gpu = setup_gpu()
-        print(f"GPU acceleration: {'Enabled' if use_gpu else 'Disabled (using CPU)'}")
-        
-        # Parse command line arguments
-        import argparse
-        parser = argparse.ArgumentParser(description="Audio Transcription and Analysis Tool")
-        parser.add_argument("file_path", nargs="?", help="Path to the audio or transcript file")
-        parser.add_argument("--transcribe-only", action="store_true", help="Only transcribe, don't analyze")
-        parser.add_argument("--analyze-transcript", action="store_true", help="Analyze an existing transcript file")
-        parser.add_argument("--model", choices=["tiny", "base", "small", "medium", "large"], default="base", 
-                          help="Whisper model size (default: base)")
-        parser.add_argument("--language", help="Force a specific language (e.g., 'en' for English)")
-        parser.add_argument("--no-gpu", action="store_true", help="Disable GPU acceleration")
-
-        parser.add_argument("--segment", type=int, default=0, 
-                  help="Segment audio into chunks of specified seconds (e.g., 600 for 10 minutes, 0 for no segmentation")
-        parser.add_argument("--clean-repetitions", action="store_true", help="Clean up repetitions in the transcript")
-
-
-        
-        
-        args = parser.parse_args()
-        
-        # Override GPU setting if requested
-        if args.no_gpu:
-            use_gpu = False
-            print("GPU acceleration manually disabled")
-        
-        # Determine the mode of operation
-        if args.transcribe_only and args.analyze_transcript:
-            print("ERROR: Cannot specify both --transcribe-only and --analyze-transcript")
-            exit(1)
-        
-        # Get the file path (from arguments or prompt)
-        file_path = args.file_path
-        if not file_path:
-            if args.analyze_transcript:
-                file_path = input("Enter the path to your transcript file: ")
-            else:
-                file_path = input("Enter the path to your audio file: ")
-        
-        if not file_path or not os.path.exists(file_path):
-            print(f"ERROR: File not found at {file_path}")
-            exit(1)
-        
-        print(f"Using file: {file_path}")
-        
-        # Process based on the selected mode
-        if args.analyze_transcript:
-            # Analyze existing transcript
-            print(f"Analyzing transcript: {file_path}")
-            output_paths = analyze_transcript(file_path, use_gpu=(not args.no_gpu))
-        elif args.transcribe_only:
-            # Transcribe only
-            print(f"Transcribing only: {file_path}")
-            output_paths = transcribe_only(file_path, args.model, use_gpu=(not args.no_gpu), language=args.language)
-        else:
-            # Full process
-            print(f"Running full transcription and analysis: {file_path}")
-            output_paths = process_audio_to_notes(file_path, args.model, use_gpu=(not args.no_gpu), language=args.language, segment_length=args.segment, clean_repetitions=args.clean_repetitions)
-        
-        # Try to open the results in browser if available
-        if not args.transcribe_only and output_paths.get("notes_html"):
-            try:
-                import webbrowser
-                html_path = output_paths["notes_html"]
-                if os.path.exists(html_path):
-                    print("\nOpening conference notes in your web browser...")
-                    webbrowser.open(f"file://{os.path.abspath(html_path)}")
-                else:
-                    print("\nHTML notes file was not generated successfully.")
-            except Exception as e:
-                print(f"\nCould not open notes in browser: {e}")
-                print(f"Please open {output_paths['notes_html']} in your browser manually.")
-        
-        # Final message
-        print("\nThank you for using Xinru's Transcription and Analysis Tool!")
-        
-    except KeyboardInterrupt:
-        print("\nProcess interrupted by user.")
-    except Exception as e:
-        print(f"\nERROR: An unexpected error occurred:")
-        print(f"{e}")
-        print("\nDetailed error information:")
-        traceback.print_exc()
-    
-    input("\nPress Enter to exit...")
-
-
-# ==========================================
-# DIRECT TRANSCRIPTION FUNCTION
-# ==========================================
 
 def transcribe_only(audio_path, model_size="base", use_gpu=True, language=None):
     """
@@ -2525,3 +2453,137 @@ def transcribe_only(audio_path, model_size="base", use_gpu=True, language=None):
         print(f"\nERROR: An error occurred during transcription: {e}")
         traceback.print_exc()
         return outputs
+
+
+if __name__ == "__main__":
+    try:
+        print("\n" + "-"*60)
+        print(" Audio Transcription and Analysis Tool")
+        print(" Windows Local Setup with NVIDIA GPU Support")
+        print("-"*60 + "\n")
+        
+        # Check system requirements
+        have_ffmpeg = check_ffmpeg()
+        if not have_ffmpeg:
+            print("WARNING: FFmpeg not found. Audio conversion may not work.")
+            print("Please install FFmpeg and add it to your PATH.")
+            
+        # Check if GPU is available and configured
+        use_gpu = setup_gpu()
+        print(f"GPU acceleration: {'Enabled' if use_gpu else 'Disabled (using CPU)'}")
+        
+        # Parse command line arguments
+        import argparse
+        parser = argparse.ArgumentParser(description="Audio Transcription and Analysis Tool")
+        parser.add_argument("file_path", nargs="?", help="Path to the audio or transcript file")
+        parser.add_argument("--transcribe-only", action="store_true", help="Only transcribe, don't analyze")
+        parser.add_argument("--analyze-transcript", action="store_true", help="Analyze an existing transcript file")
+        parser.add_argument("--use-transcript", type=str, help="Path to already transcribed text file to use instead of audio")
+        parser.add_argument("--model", choices=["tiny", "base", "small", "medium", "large"], default="base", 
+                          help="Whisper model size (default: base)")
+        parser.add_argument("--language", help="Force a specific language (e.g., 'en' for English)")
+        parser.add_argument("--no-gpu", action="store_true", help="Disable GPU acceleration")
+        parser.add_argument("--segment", type=int, default=0, 
+                  help="Segment audio into chunks of specified seconds (e.g., 600 for 10 minutes, 0 for no segmentation")
+        parser.add_argument("--clean-repetitions", action="store_true", help="Clean up repetitions in the transcript")
+        
+        args = parser.parse_args()
+        
+        # Override GPU setting if requested
+        if args.no_gpu:
+            use_gpu = False
+            print("GPU acceleration manually disabled")
+        
+        # Determine the mode of operation
+        if sum([args.transcribe_only, args.analyze_transcript, bool(args.use_transcript)]) > 1:
+            print("ERROR: Cannot specify more than one mode from: --transcribe-only, --analyze-transcript, --use-transcript")
+            exit(1)
+        
+        # Get the file path (from arguments or prompt)
+        file_path = args.file_path
+        if not file_path:
+            if args.analyze_transcript:
+                file_path = input("Enter the path to your transcript file: ")
+            elif args.use_transcript:
+                file_path = input("Enter the path to your audio file (for naming outputs): ")
+            else:
+                file_path = input("Enter the path to your audio file: ")
+        
+        if (not file_path or not os.path.exists(file_path)) and not args.use_transcript:
+            print(f"ERROR: File not found at {file_path}")
+            exit(1)
+            
+        # Check transcript file exists if using one
+        if args.use_transcript and not os.path.exists(args.use_transcript):
+            print(f"ERROR: Transcript file not found at {args.use_transcript}")
+            exit(1)
+        
+        print(f"Using file: {file_path}")
+        
+        # Process based on the selected mode
+        if args.analyze_transcript:
+            # Analyze existing transcript
+            print(f"Analyzing transcript: {file_path}")
+            output_paths = analyze_transcript(file_path, use_gpu=(not args.no_gpu))
+        elif args.transcribe_only:
+            # Transcribe only
+            print(f"Transcribing only: {file_path}")
+            output_paths = transcribe_only(file_path, args.model, use_gpu=(not args.no_gpu), language=args.language)
+        elif args.use_transcript:
+            # Use existing transcript with full audio file path
+            print(f"Using transcript from: {args.use_transcript}")
+            print(f"With audio file path (for naming): {file_path}")
+            output_paths = process_audio_to_notes(
+                file_path, 
+                args.model, 
+                use_gpu=(not args.no_gpu), 
+                language=args.language, 
+                segment_length=args.segment, 
+                clean_repetitions=args.clean_repetitions,
+                transcribed_text_path=args.use_transcript
+            )
+        else:
+            # Full process
+            print(f"Running full transcription and analysis: {file_path}")
+            output_paths = process_audio_to_notes(
+                file_path, 
+                args.model, 
+                use_gpu=(not args.no_gpu), 
+                language=args.language, 
+                segment_length=args.segment, 
+                clean_repetitions=args.clean_repetitions
+            )
+        
+        # Try to open the results in browser if available
+        if not args.transcribe_only and output_paths.get("notes_html"):
+            try:
+                import webbrowser
+                html_path = output_paths["notes_html"]
+                if os.path.exists(html_path):
+                    print("\nOpening conference notes in your web browser...")
+                    webbrowser.open(f"file://{os.path.abspath(html_path)}")
+                else:
+                    print("\nHTML notes file was not generated successfully.")
+            except Exception as e:
+                print(f"\nCould not open notes in browser: {e}")
+                print(f"Please open {output_paths['notes_html']} in your browser manually.")
+        
+        # Final message
+        print("\nThank you for using the Audio Transcription and Analysis Tool!")
+        
+    except KeyboardInterrupt:
+        print("\nProcess interrupted by user.")
+    except Exception as e:
+        print(f"\nERROR: An unexpected error occurred:")
+        print(f"{e}")
+        print("\nDetailed error information:")
+        traceback.print_exc()
+    
+    input("\nPress Enter to exit...")
+
+
+# ==========================================
+# DIRECT TRANSCRIPTION FUNCTION
+# ==========================================
+
+
