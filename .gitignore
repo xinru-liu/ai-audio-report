@@ -56,7 +56,7 @@ DS_env/
 *.m4a
 *.ogg
 *.json
-*.txt
+*.html
 *.md
 !README.md
 *.csv
@@ -101,3 +101,5 @@ DS_env/
 *.bak
 *.tmp
 *.log
+test_import.py
+transcript_analyzer.py

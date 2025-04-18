@@ -1,7 +1,25 @@
 @echo off
+SETLOCAL EnableDelayedExpansion
+
+SET REQ_TYPE=basic
+
+:: Parse command line arguments
+IF NOT "%1"=="" (
+    IF /I "%1"=="DS" (
+        SET REQ_TYPE=DS
+    ) ELSE IF /I "%1"=="basic" (
+        SET REQ_TYPE=basic
+    ) ELSE (
+        ECHO [WARNING] Unknown argument "%1". Using basic requirements.
+        ECHO Valid options are "basic" or "DS"
+    )
+)
+
 ECHO ====================================================
 ECHO Audio Transcription and Analysis Tool - Setup Script
 ECHO ====================================================
+ECHO.
+ECHO Selected requirements type: !REQ_TYPE!
 ECHO.
 ECHO This script will set up the environment for the Audio Transcription
 ECHO and Analysis tool on your Windows system with NVIDIA GPU support.
@@ -13,7 +31,7 @@ ECHO - Internet connection for downloading packages
 ECHO.
 ECHO The setup will:
 ECHO 1. Create a Python virtual environment
-ECHO 2. Install required Python packages
+ECHO 2. Install required Python packages (using !REQ_TYPE!_requirements.txt)
 ECHO 3. Download models and resources
 ECHO 4. Create necessary directories
 ECHO.
@@ -62,13 +80,17 @@ IF %ERRORLEVEL% NEQ 0 (
     pip install torch torchvision torchaudio
 )
 
-:: Install other required packages
+:: Install requirements from file based on type
 ECHO.
-ECHO Installing required packages (this may take a while)...
-pip install openai-whisper transformers nltk spacy sentence-transformers keybert matplotlib pandas seaborn wordcloud tqdm
-pip install bert-extractive-summarizer markdown
-IF %ERRORLEVEL% NEQ 0 (
-    ECHO [ERROR] Failed to install required packages.
+ECHO Installing requirements from !REQ_TYPE!_requirements.txt (this may take a while)...
+IF EXIST !REQ_TYPE!_requirements.txt (
+    pip install -r !REQ_TYPE!_requirements.txt
+    IF %ERRORLEVEL% NEQ 0 (
+        ECHO [ERROR] Failed to install packages from !REQ_TYPE!_requirements.txt
+        GOTO :END
+    )
+) ELSE (
+    ECHO [ERROR] Requirements file !REQ_TYPE!_requirements.txt not found.
     GOTO :END
 )
 
@@ -108,7 +130,7 @@ IF %ERRORLEVEL% NEQ 0 (
 :: Success message
 ECHO.
 ECHO ====================================================
-ECHO Setup completed successfully!
+ECHO Setup completed successfully with !REQ_TYPE! requirements!
 ECHO ====================================================
 ECHO.
 ECHO To use the Audio Transcription and Analysis tool:
@@ -120,3 +142,4 @@ ECHO.
 
 :END
 PAUSE
+ENDLOCAL
