@@ -390,7 +390,7 @@ def remove_repetitions(transcript_path):
 # TEXT ANALYSIS FUNCTIONS
 # ==========================================
 
-def segment_speakers(transcript, min_segment_length=100, max_segment_length=1000):
+def segment_speakers(transcript, min_segment_length=100, max_segment_length=1000,segment_markers=None):
     """
     Segment transcript into probable speaker turns based on pauses and content.
     
@@ -403,6 +403,12 @@ def segment_speakers(transcript, min_segment_length=100, max_segment_length=1000
         list: List of segments
     """
     print("Segmenting transcript into probable speaker turns...")
+    
+    # If we have explicit segment markers from multi-segment processing
+    if segment_markers:
+        # Use these as additional split points
+        for marker in segment_markers:
+            transcript = transcript.replace(marker, "\n\n" + marker + "\n\n")
     
     # First split by clear paragraph or long pauses
     initial_segments = re.split(r'\n\n+|\.\s+(?=[A-Z])', transcript)
@@ -543,6 +549,7 @@ def generate_key_takeaways(transcript, summaries, topics, num_takeaways=5, use_g
         list: Insightful key takeaways
     """
     print("Generating key takeaways with DeepSeek 7B model...")
+    print(f"Generating key takeaways from full transcript ({len(transcript)} chars)...")
     
     try:
         # Add necessary imports for DeepSeek and quantization
@@ -2261,9 +2268,12 @@ def process_audio_to_notes(audio_path, model_size="base", use_gpu=True, language
                 "text": full_transcript,
                 "segments": all_segments
             }
+            # Use full_transcript for all subsequent processing
+            transcript = full_transcript
         else:
             # No segmentation, transcribe the whole file
             transcription_result = transcribe_audio(processed_audio, model_size, use_gpu, language)
+            transcript = transcription_result["text"]
 
         transcript = transcription_result["text"]
         
@@ -2450,7 +2460,7 @@ if __name__ == "__main__":
                 print(f"Please open {output_paths['notes_html']} in your browser manually.")
         
         # Final message
-        print("\nThank you for using the Audio Transcription and Analysis Tool!")
+        print("\nThank you for using Xinru's Transcription and Analysis Tool!")
         
     except KeyboardInterrupt:
         print("\nProcess interrupted by user.")
